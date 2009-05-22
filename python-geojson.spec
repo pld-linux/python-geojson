@@ -2,7 +2,7 @@
 Summary:	Encoder/decoder for simple GIS features
 Name:		python-%{module}
 Version:	1.0.1
-Release:	0.1
+Release:	0.2
 License:	BSD
 Group:		Development/Languages/Python
 Source0:	http://pypi.python.org/packages/source/g/geojson/geojson-1.0.1.tar.gz
@@ -11,7 +11,7 @@ URL:		http://pypi.python.org/pypi/geojson
 BuildRequires:	python-devel
 BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 1.219
-Requires:		python-modules
+Requires:	python-simplejson
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -47,6 +47,7 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc CHANGES.txt CREDITS.txt DEPENDENCIES.txt FAQ.txt GeoInterface.txt README.txt VERSION.txt
+%dir %{py_sitescriptdir}/geojson
 %{py_sitescriptdir}/geojson/*.py[co]
 %if "%{py_ver}" > "2.4"
 %{py_sitescriptdir}/geojson-*.egg-info
