@@ -10,7 +10,7 @@ Source0:	http://pypi.python.org/packages/source/g/geojson/geojson-1.0.1.tar.gz
 URL:		http://pypi.python.org/pypi/geojson
 BuildRequires:	python-devel
 BuildRequires:	rpm-pythonprov
-BuildRequires:	rpmbuild(macros) >= 1.219
+BuildRequires:	rpmbuild(macros) >= 1.710
 Requires:	python-simplejson
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
